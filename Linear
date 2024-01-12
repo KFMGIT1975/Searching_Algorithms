@@ -1,0 +1,25 @@
+pos = -1
+list = []
+n=int(input("Enter number of elements in the list : "))
+input_str=input("Enter the list elements separated by spaces : ")
+elements=input_str.split()
+for i in range(0,n):
+    num=int(elements[i])
+    list.append(num)
+print(list)
+
+a = int(input('which number to find? :')) 
+#function for linear-search
+
+def lin_search(list, a):
+    for j in range(0, len(list)):
+        if list[j] == a:
+            globals()['pos']=j
+            return True
+    return False
+
+if lin_search(list, a):
+    print(f"{a} is found at position {pos+1}.")
+else:
+    print("Not found.")
+
